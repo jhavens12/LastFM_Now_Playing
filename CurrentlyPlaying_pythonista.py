@@ -10,8 +10,8 @@ import credentials
 from_zone = tz.gettz('UTC')
 to_zone = tz.gettz('America/New_York')
 
-key = "53449f744482a9f51baa9aed5065bdf2"
-user = "h4v3ns"
+key = credentials.key
+user = credentials.user
 
 url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user="+user+"&api_key="+key+"&format=json"
 dataset = requests.get(url).json()
