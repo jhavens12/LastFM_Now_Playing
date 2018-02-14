@@ -72,23 +72,23 @@ for track in track_list:
 
 l.append("\n")
 
-wu_key = credentials.wu_key
+# wu_key = credentials.wu_key
+#
+# url = "http://api.wunderground.com/api/"+wu_key+"/conditions/q/VT/Essex.json"
+# dataset = requests.get(url).json()
+#
+# temp = str(dataset['current_observation']['temp_f'])+" F"
+# conditions = dataset['current_observation']['weather']
 
-url = "http://api.wunderground.com/api/"+wu_key+"/conditions/q/VT/Essex.json"
-dataset = requests.get(url).json()
+# w = []
+# w.append("\n")
+# w.append("Weather:")
+# w.append("\n   Temp: " +temp)
+# w.append("\n   Conditions: " +conditions)
 
-temp = str(dataset['current_observation']['temp_f'])+" F"
-conditions = dataset['current_observation']['weather']
-
-w = []
-w.append("\n")
-w.append("Weather:")
-w.append("\n   Temp: " +temp)
-w.append("\n   Conditions: " +conditions)
-
-weather = ''.join(w)
+# weather = ''.join(w)
 lastfm = ''.join(l)
-data = lastfm+weather
+data = lastfm#+weather
 data_bytes = data.encode("utf-8")
 
 clipboard.copy(data_bytes)
